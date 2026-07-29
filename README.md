@@ -1,47 +1,74 @@
-# CopyrightScan-Delisting-Analysis-Python-Project
+# Copyright Removals Analysis
 
-Analyzes content delisting trends from copyright infringement using Google's public web-search copyright-removals dataset.
-
-**Live:** https://CopyrightScan-Delisting-Analysis-Python-Project.oriz.in
-
-[![Stars](https://img.shields.io/github/stars/chirag127/CopyrightScan-Delisting-Analysis-Python-Project?style=flat-square)](https://github.com/chirag127/CopyrightScan-Delisting-Analysis-Python-Project/stargazers)
+[![Stars](https://img.shields.io/github/stars/chirag127/copyright-removals-analysis?style=flat-square)](https://github.com/chirag127/copyright-removals-analysis/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](./LICENSE)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square)
 
-## What it does
+Data analysis of Google's public Web Search copyright-removal (DMCA delisting) transparency dataset.
 
-Downloads Google's [Transparency Report web-search copyright removals](https://storage.googleapis.com/transparencyreport/google-websearch-copyright-removals.zip) dataset and explores delisting patterns — removal-request volume, reporting organizations, and specified domains — with pandas.
+**Live:** https://copyright-removals-analysis.oriz.in
 
-## Files
+---
 
-| File | Purpose |
-|------|---------|
-| `main.py` | Downloads the dataset, unzips it, loads the CSV into a DataFrame |
-| `a.ipynb` | Jupyter notebook for interactive exploration and trend analysis |
+## What it analyzes
 
-## Setup
+Google's [Transparency Report](https://transparencyreport.google.com/copyright/overview) publishes every DMCA-style delisting request received for web search results. This project explores that dataset to answer:
 
-```bash
-git clone https://github.com/chirag127/CopyrightScan-Delisting-Analysis-Python-Project.git
-cd CopyrightScan-Delisting-Analysis-Python-Project
-pip install pandas requests
+1. Who files the most removal requests (copyright owners)?
+2. Which intermediary agencies submit on their behalf?
+3. Which domains are most targeted?
+4. How has request volume trended year-over-year?
+5. What fraction of requested URLs actually get deindexed?
+
+## Key findings
+
+Run the notebook or CLI to generate findings from the latest dataset. Example outputs (2023 snapshot):
+
+- Several hundred million URLs have been requested for removal since records began.
+- A small set of music/film industry organisations accounts for the majority of requests.
+- File-sharing and streaming aggregator domains dominate the most-targeted list.
+- Request volume peaked around 2016–2017 and has declined as platforms improved DMCA tooling.
+- Removal rates exceed 90% for most filing organisations.
+
+## Project structure
+
+```
+notebooks/copyright-removals-analysis.ipynb   interactive analysis
+src/copyright_removals/
+  download.py                                 fetch + extract + cache dataset
+  analyze.py                                  headless CLI analysis + chart output
+data/                                         gitignored — downloaded CSVs
+output/                                       gitignored — generated charts
+requirements.txt
+docs/index.html                               landing page (GitHub Pages)
 ```
 
-## Usage
+## How to run
 
-Run the downloader/loader:
-
-```bash
-python main.py
-```
-
-Or open the notebook for interactive analysis:
+### Notebook
 
 ```bash
-jupyter notebook a.ipynb
+git clone https://github.com/chirag127/copyright-removals-analysis.git
+cd copyright-removals-analysis
+pip install -r requirements.txt
+jupyter notebook notebooks/copyright-removals-analysis.ipynb
 ```
 
-The dataset ships as CSV files (records, requests, domains) extracted from the downloaded zip.
+Run all cells — cell 2 downloads the dataset on first run (~80 MB).
+
+### CLI
+
+```bash
+pip install -r requirements.txt
+python -m copyright_removals.analyze --download --report
+# Charts saved to output/; findings printed to stdout
+```
+
+## Data source
+
+Google Transparency Report — Web Search Copyright Removals  
+Dataset URL: https://storage.googleapis.com/transparencyreport/google-websearch-copyright-removals.zip  
+Data is public and published by Google.
 
 ## License
 

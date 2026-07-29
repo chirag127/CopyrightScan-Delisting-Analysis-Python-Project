@@ -1,0 +1,1 @@
+"""copyright_removals package."""

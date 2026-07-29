@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copyright Removals Analysis</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --surface: #161b22;
+    --border: #30363d;
+    --accent: #58a6ff;
+    --accent2: #f78166;
+    --text: #e6edf3;
+    --muted: #8b949e;
+    --green: #3fb950;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+  }
+  header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: -0.5px;
+  }
+  header p {
+    margin-top: .6rem;
+    color: var(--muted);
+    font-size: 1.05rem;
+    max-width: 640px;
+    margin-inline: auto;
+  }
+  .badges {
+    margin-top: 1rem;
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .badges a img { height: 20px; }
+  main {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.4rem 1.5rem;
+  }
+  .card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: .5rem;
+  }
+  .card p { color: var(--muted); font-size: .9rem; }
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: .5rem;
+  }
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    margin-top: .75rem;
+  }
+  .steps li {
+    counter-increment: step;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .steps li::before {
+    content: counter(step);
+    flex-shrink: 0;
+    width: 28px; height: 28px;
+    background: var(--accent);
+    color: var(--bg);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: .85rem;
+    margin-top: .1rem;
+  }
+  .steps li p { color: var(--muted); font-size: .95rem; }
+  pre {
+    background: #010409;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    font-size: .88rem;
+    color: var(--green);
+    margin-top: .75rem;
+  }
+  .cta {
+    margin-top: 3rem;
+    text-align: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: .7rem 1.6rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: .95rem;
+    text-decoration: none;
+    transition: opacity .15s;
+  }
+  .btn:hover { opacity: .85; }
+  .btn-primary { background: var(--accent); color: var(--bg); }
+  .btn-secondary {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: .85rem;
+    padding: 2.5rem 1.5rem;
+    border-top: 1px solid var(--border);
+    margin-top: 4rem;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Copyright Removals Analysis</h1>
+  <p>Exploring Google's public DMCA transparency dataset — who files, what gets targeted, how trends evolved.</p>
+  <div class="badges">
+    <a href="https://github.com/chirag127/copyright-removals-analysis/stargazers">
+      <img src="https://img.shields.io/github/stars/chirag127/copyright-removals-analysis?style=flat-square" alt="Stars">
+    </a>
+    <a href="https://github.com/chirag127/copyright-removals-analysis/blob/main/LICENSE">
+      <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square" alt="MIT">
+    </a>
+    <img src="https://img.shields.io/badge/Python-3.10%2B-blue?style=flat-square" alt="Python">
+    <img src="https://img.shields.io/badge/pandas-2.0%2B-150458?style=flat-square" alt="pandas">
+  </div>
+</header>
+
+<main>
+  <h2>What questions does this answer?</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Who files the most?</h3>
+      <p>Top copyright owners and the intermediary agencies submitting on their behalf.</p>
+    </div>
+    <div class="card">
+      <h3>Which domains are targeted?</h3>
+      <p>Ranking of domains receiving the most DMCA delisting requests.</p>
+    </div>
+    <div class="card">
+      <h3>Trends over time</h3>
+      <p>Year-over-year and monthly request volume — peaks, declines, and inflection points.</p>
+    </div>
+    <div class="card">
+      <h3>Removal rate</h3>
+      <p>What fraction of requested URLs actually get deindexed by Google?</p>
+    </div>
+    <div class="card">
+      <h3>Industry breakdown</h3>
+      <p>Music vs film vs software vs gaming — which sectors drive the most volume?</p>
+    </div>
+    <div class="card">
+      <h3>Data source</h3>
+      <p>Google Transparency Report — fully public, no PII, updated periodically.</p>
+    </div>
+  </div>
+
+  <h2>How to run</h2>
+  <ol class="steps">
+    <li><p>Clone and install: <code>git clone https://github.com/chirag127/copyright-removals-analysis.git &amp;&amp; pip install -r requirements.txt</code></p></li>
+    <li><p>Open the notebook: <code>jupyter notebook notebooks/copyright-removals-analysis.ipynb</code> — first cell downloads the ~80 MB dataset automatically.</p></li>
+    <li><p>Or run headless CLI:</p>
+      <pre>python -m copyright_removals.analyze --download --report
+# Charts saved to output/  |  Findings printed to stdout</pre>
+    </li>
+  </ol>
+
+  <div class="cta">
+    <a class="btn btn-primary"
+       href="https://github.com/chirag127/copyright-removals-analysis/blob/main/notebooks/copyright-removals-analysis.ipynb">
+      View Notebook
+    </a>
+    <a class="btn btn-secondary"
+       href="https://github.com/chirag127/copyright-removals-analysis">
+      GitHub
+    </a>
+  </div>
+</main>
+
+<footer>
+  Data: <a href="https://transparencyreport.google.com/copyright/overview">Google Transparency Report</a> &mdash;
+  public dataset &mdash;
+  <a href="https://github.com/chirag127/copyright-removals-analysis/blob/main/LICENSE">MIT License</a> &mdash;
+  built by <a href="https://github.com/chirag127">chirag127</a>
+</footer>
+
+</body>
+</html>
