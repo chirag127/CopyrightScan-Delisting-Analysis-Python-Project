@@ -21,19 +21,19 @@ env/
 # Testing
 .pytest_cache/
 
-# Data files (if not meant to be tracked)
-*.csv
+# Data and output dirs (downloaded/generated, not tracked)
+data/
+output/
+# JSON files except docs/data/ (site data is tracked)
 *.json
-*.parquet
-*.hdf5
-*.pkl
+!docs/data/*.json
+
+# Egg / dist
+*.egg-info/
 
 # Build artifacts
 dist/
 build/
-*.egg-info/
-
-# Logs
 *.log
 
 # OS generated files
