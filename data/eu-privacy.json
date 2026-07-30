@@ -1,0 +1,17 @@
+{
+  "id": "eu-privacy",
+  "name": "EU Right to be Forgotten (Delisting)",
+  "source_url": "https://transparencyreport.google.com/eu-privacy/overview",
+  "bulk_available": false,
+  "description": "Requests under EU privacy law to delist URLs from Search. Volumes by country, approval rates, top requesting countries.",
+  "page": "eu-privacy.html",
+  "data": {
+    "note": "No bulk CSV. Data at https://transparencyreport.google.com/eu-privacy/overview",
+    "summary": "EU Right to be Forgotten delisting requests since the 2014 CJEU ruling.",
+    "key_facts": [
+      "1M+ URLs requested for delisting since 2014.",
+      "~46% of evaluated URLs were delisted.",
+      "France, Germany, and the UK are top requesting countries."
+    ]
+  }
+}

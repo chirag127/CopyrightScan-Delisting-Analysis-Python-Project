@@ -1,0 +1,17 @@
+{
+  "id": "email-encryption",
+  "name": "Email Encryption in Transit",
+  "source_url": "https://transparencyreport.google.com/safer-email/overview",
+  "bulk_available": false,
+  "description": "Percentage of inbound/outbound Gmail messages encrypted with TLS, broken down by domain.",
+  "page": "email-encryption.html",
+  "data": {
+    "note": "No bulk CSV. Data at https://transparencyreport.google.com/safer-email/overview",
+    "summary": "TLS encryption rates for inbound/outbound Gmail traffic by domain.",
+    "key_facts": [
+      "Gmail-to-Gmail traffic: 100% TLS encrypted since 2015.",
+      "Inbound encrypted: rose from ~55% (2014) to >95% (2023).",
+      "Domains without TLS support are now a small minority."
+    ]
+  }
+}

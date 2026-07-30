@@ -1,0 +1,17 @@
+{
+  "id": "https",
+  "name": "HTTPS Encryption in Transit",
+  "source_url": "https://transparencyreport.google.com/https/overview",
+  "bulk_available": false,
+  "description": "Percentage of traffic encrypted with HTTPS across Google products and top sites over time.",
+  "page": "https.html",
+  "data": {
+    "note": "No bulk CSV. Data at https://transparencyreport.google.com/https/overview",
+    "summary": "HTTPS adoption across Google services and top-1000 websites over time.",
+    "key_facts": [
+      "Google Search and Gmail reached 100% HTTPS before 2016.",
+      "Top-1000 site HTTPS adoption rose from ~48% (2015) to >95% (2023).",
+      "Chrome's HTTPS-first mode accelerated the final holdouts."
+    ]
+  }
+}

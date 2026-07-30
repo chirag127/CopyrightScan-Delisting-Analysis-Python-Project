@@ -1,0 +1,17 @@
+{
+  "id": "gov-removals",
+  "name": "Government Requests to Remove Content",
+  "source_url": "https://transparencyreport.google.com/government-removals/overview",
+  "bulk_available": false,
+  "description": "Requests from governments worldwide to remove content from Google services. Data published per-country per-period as aggregates.",
+  "page": "government-removals.html",
+  "data": {
+    "note": "No bulk CSV. Data at https://transparencyreport.google.com/government-removals/overview",
+    "summary": "Google publishes bi-annual counts of government content-removal requests per country. Volumes rose ~600% from 2011 to 2023.",
+    "key_facts": [
+      "Requests grew from ~1 000 in H1 2011 to ~10 000+ in recent periods.",
+      "Top requesting countries include Russia, Turkey, India, and South Korea.",
+      "Compliance rate varies widely \u2014 some countries see <10%, others >80%."
+    ]
+  }
+}

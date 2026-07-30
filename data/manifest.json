@@ -1,0 +1,44 @@
+{
+  "datasets": [
+    {
+      "id": "copyright",
+      "name": "Copyright Removals (Web Search)",
+      "page": "copyright.html"
+    },
+    {
+      "id": "gov-removals",
+      "name": "Government Requests to Remove Content",
+      "page": "government-removals.html"
+    },
+    {
+      "id": "gov-user-data",
+      "name": "Government Requests for User Information",
+      "page": "user-data.html"
+    },
+    {
+      "id": "https",
+      "name": "HTTPS Encryption in Transit",
+      "page": "https.html"
+    },
+    {
+      "id": "safe-browsing",
+      "name": "Safe Browsing (Unsafe Sites)",
+      "page": "safe-browsing.html"
+    },
+    {
+      "id": "email-encryption",
+      "name": "Email Encryption in Transit",
+      "page": "email-encryption.html"
+    },
+    {
+      "id": "eu-privacy",
+      "name": "EU Right to be Forgotten (Delisting)",
+      "page": "eu-privacy.html"
+    },
+    {
+      "id": "traffic-disruptions",
+      "name": "Traffic Disruptions",
+      "page": "traffic-disruptions.html"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "copyright",
+  "name": "Copyright Removals (Web Search)",
+  "source_url": "https://transparencyreport.google.com/copyright/overview",
+  "bulk_available": true,
+  "description": "Every DMCA-style delisting request received for Google Web Search results. Includes copyright owner, reporting org, domain, URLs requested/removed.",
+  "page": "copyright.html",
+  "data": {
+    "error": "No CSVs in /home/runner/work/google-transparency-report-analysis/google-transparency-report-analysis/data/copyright. Run --download first."
+  }
+}

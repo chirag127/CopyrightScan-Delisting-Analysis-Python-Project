@@ -1,0 +1,17 @@
+{
+  "id": "gov-user-data",
+  "name": "Government Requests for User Information",
+  "source_url": "https://transparencyreport.google.com/user-data/overview",
+  "bulk_available": false,
+  "description": "Government requests to disclose user data (legal process). Counts per country, type of legal process, and compliance rate.",
+  "page": "user-data.html",
+  "data": {
+    "note": "No bulk CSV. Data at https://transparencyreport.google.com/user-data/overview",
+    "summary": "Legal process requests to disclose user data. Majority are US-origin search warrants and subpoenas.",
+    "key_facts": [
+      "US accounts for ~50% of all requests by volume.",
+      "Google discloses data in ~70-80% of cases with valid legal process.",
+      "Emergency disclosure requests have risen sharply since 2019."
+    ]
+  }
+}

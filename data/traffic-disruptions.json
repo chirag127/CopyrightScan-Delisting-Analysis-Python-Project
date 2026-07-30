@@ -1,0 +1,17 @@
+{
+  "id": "traffic-disruptions",
+  "name": "Traffic Disruptions",
+  "source_url": "https://transparencyreport.google.com/traffic/overview",
+  "bulk_available": false,
+  "description": "Anomalous interruptions to Google services, often government-ordered internet disruptions. Timeline of events by country.",
+  "page": "traffic-disruptions.html",
+  "data": {
+    "note": "No bulk CSV. Data at https://transparencyreport.google.com/traffic/overview",
+    "summary": "Documented anomalies in Google traffic \u2014 typically government-ordered shutdowns.",
+    "key_facts": [
+      "Events documented in 60+ countries since 2012.",
+      "Longest sustained disruptions in North Korea, Turkmenistan, Cuba.",
+      "Election-related disruptions increased significantly post-2018."
+    ]
+  }
+}

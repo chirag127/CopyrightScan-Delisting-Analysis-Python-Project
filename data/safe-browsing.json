@@ -1,0 +1,17 @@
+{
+  "id": "safe-browsing",
+  "name": "Safe Browsing (Unsafe Sites)",
+  "source_url": "https://transparencyreport.google.com/safe-browsing/overview",
+  "bulk_available": false,
+  "description": "Malware and phishing sites detected weekly by Google Safe Browsing. Weekly unsafe-site counts and detection trends.",
+  "page": "safe-browsing.html",
+  "data": {
+    "note": "No bulk CSV. Data at https://transparencyreport.google.com/safe-browsing/overview",
+    "summary": "Weekly counts of malware and phishing sites detected by Google Safe Browsing.",
+    "key_facts": [
+      "Phishing sites now outnumber malware sites roughly 10:1.",
+      "Detected unsafe sites peaked around 2016-2017; declined with browser warnings.",
+      "Safe Browsing protects 5B+ devices across Chrome, Android, Firefox."
+    ]
+  }
+}
